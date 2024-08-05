@@ -1,0 +1,75 @@
+﻿<Window x:Class="Abram_NotePad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Abram_NotePad"
+        mc:Ignorable="d"
+        Title="NotePad_Bero" Height="480" Width="640" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" WindowStartupLocation="CenterScreen" Icon="/Images/notepad.png">
+    <Grid Margin="-5,-15,-5,-1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="431*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="91*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TxtContent" Margin="10,54,10,11" TextWrapping="Wrap" FontSize="20" Grid.ColumnSpan="2" Grid.RowSpan="2" TextChanged="TxtContent_TextChanged" AcceptsReturn="True" CaretBrush="Black" UndoLimit="500" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"/>
+        <Menu Height="40" Margin="5,14,5,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="20">
+            <MenuItem Header="_File"  FontSize="20" Width="75" Height="38" Cursor="Hand">
+                <MenuItem.Icon>
+                    <Image Source="/Images/file.png" Margin="0,0,-9,0"></Image>
+                </MenuItem.Icon>
+                <MenuItem Name="New_Menu"  Header="New" Height="40" Width="152" Click="New_Menu_Click"/>
+                <MenuItem x:Name="Open_Menu"   Header="Open" Height="40" Width="152" Click="Open_Menu_Click"/>
+                <MenuItem Name="Save_Menu"  Header="Save as" Height="40" Width="152" Click="Save_Menu_Click"/>
+                <MenuItem Name="Exit_Menu"  Header="Exit" Height="40" Width="152" Click="Exit_Menu_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="_Edit" FontSize="20" Width="70" Height="40" Cursor="Hand">
+                <MenuItem.Icon>
+                    <Image Source="/Images/8725908_file_edit_alt_icon.png"></Image>
+                </MenuItem.Icon>
+                <MenuItem Name="Undo_Menu" Header="Undo" Height="40" Width="190" Click="Undo_Menu_Click" />
+                <MenuItem Name="Redo_Menu" Header="Redo" Height="40" Width="190" Click="Redo_Menu_Click" />
+                <MenuItem Name="Cut_Menu" Header="Cut" Height="40" Width="190" Click="Cut_Menu_Click" />
+                <MenuItem Name="Copy_Menu" Header="Copy" Height="40" Width="190" Click="Copy_Menu_Click" />
+                <MenuItem Name="Past_Menu" Header="Past" Height="40" Width="190" Click="Past_Menu_Click" />
+                <MenuItem Name="Select_All" Header="Select All" Height="40" Width="190" Click="Select_All_Click" />
+            </MenuItem>
+            <MenuItem Header="F_ormat" FontSize="20" Width="75" Cursor="Hand">
+                <MenuItem.Icon>
+                    <Image Source="/Images/4975312_docs_document_format_page_word_icon.png" Margin="0,0,-4,0"></Image>
+                </MenuItem.Icon>
+                <MenuItem x:Name="Word_Wrap" Header="Word Wrap" Height="40" Width="190" IsChecked="True" IsCheckable="True" Click="Word_Wrap_Click"/>
+            </MenuItem>
+            <MenuItem Header="_View" FontSize="20" Width="80" Cursor="Hand">
+                <MenuItem.Icon>
+                    <Image Source="/Images/view.png"></Image>
+                </MenuItem.Icon>
+                <MenuItem  Header="Zoom">
+                    <MenuItem x:Name="Zoom_In_Menu" Header="zoom in" Height="40" Width="190" Click="Zoom_In_Menu_Click" />
+                    <MenuItem x:Name="x_Name__Zoom_Out_Menu_" Header="zoom out" Height="40" Width="190" Click="x_Name__Zoom_Out_Menu__Click" />
+                    <MenuItem x:Name="Zoom__Menu" Header="Reset zoom" Height="40" Width="190" Click="Zoom__Menu_Click" />
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Color_Menu" Header="_Color" Width="90">
+                <MenuItem.Icon>
+                    <Image Source="/Images/2824445_academy_brush_color_paint_pallete_icon.png" Margin="0,0,-14,0"></Image>
+                </MenuItem.Icon>
+                <MenuItem Name="Red_Menu" Header="Red" Height="37" Width="150" Click="Red_Menu_Click"/>
+                <MenuItem Name="Blue_Menu" Header="Blue" Height="37" Width="150" Click="Blue_Menu_Click"/>
+                <MenuItem Name="Black_Menu" Header="Black" Height="37" Width="150" Click="Black_Menu_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help" FontSize="20" Width="75" Cursor="Hand">
+                <MenuItem.Icon>
+                    <Image Source="/Images/help.png" ></Image>
+                </MenuItem.Icon>
+                <MenuItem Name="About_Menu" Header="About" Width="160" Height="40" Click="About_Menu_Click"/>
+            </MenuItem>
+
+        </Menu>
+    </Grid>
+</Window>

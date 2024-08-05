@@ -1,0 +1,23 @@
+﻿<Window x:Class="Abram_NotePad.About_Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Abram_NotePad"
+        mc:Ignorable="d"
+        Title="About_Us" Height="480" Width="505" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/41282_basket_cart_ecommerce_purple_shopping_icon.png">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="0,-2,-20,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="OK_btn" Content="Ok" Margin="37,366,44,30" FontSize="20" Foreground="White" Background="#FF0539B9" FontWeight="Bold" Grid.Column="1" Click="OK_btn_Click"/>
+        <Image Margin="25,266,10,22" Source="/Images/41282_basket_cart_ecommerce_purple_shopping_icon.png" RenderTransformOrigin="0.573,1.018"/>
+        <Label Content="NotePad For Save Important Information" Grid.ColumnSpan="2" Margin="5,6,20,391" FontSize="24" FontWeight="Bold"/>
+        <Label Content="CreativeCode with Abram Farouk" Grid.ColumnSpan="2" Margin="100,66,80,328" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
+        <Label Content="Email :" HorizontalAlignment="Left" Margin="55,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.086,1.773" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Phone :" HorizontalAlignment="Left" Margin="55,207,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.086,1.773" FontSize="20" FontWeight="Bold"/>
+        <Label Content="abramfarouk62@gmail.com" Grid.ColumnSpan="2" Margin="135,131,60,263" FontSize="22"/>
+        <Label Content="01061414769" Grid.ColumnSpan="2" Margin="140,201,70,203" FontSize="22"/>
+    </Grid>
+</Window>
